@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+    <style type="text/css">
+        .important { color: #336699; }
+
+        input {
+            width: 40%;
+            text-align: center;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 24px;
+            margin: 10px auto;
+        }
+        button {
+        	text-align: center;
+        	padding-top: 10px;
+        	padding-bottom: 10px;
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 24px;
+            margin: 10px auto;
+        }
+        ul {
+            list-style-type: none;
+        }
+        h1 {
+            font-size: 80px;
+            color: maroon;
+            font-family: 'Chewy', cursive;
+            margin: 5px;
+        }
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 28px;
+            color: black;
+        }
+        #main {
+        	margin-top: 50px;
+        }
+        html {
+            background-color: #cefaff;
+            text-align: center;
+        }
+        @media only screen and (max-width: 630px) {
+
+           h1 { 
+              font-size: 50px; 
+           }
+           h2 {
+              font-size: 18px;
+           }
+           li {
+              font-size: 12px;
+           }
+
+        }
+    </style>
+    <title>Sweater Weather</title>
+</head>
+<body>
+    <h2 id="main"> FIND OUT IF IT'S </h2>
+    <h1>Sweater Weather</h1>
+    <h2> IN YOUR TOWN </h2>
+
+	<form method="POST" action="/weather">
+    	<input type="text" name="zipc" value="ZIP" pattern="[0-9]{5}"><button type="submit" value="Submit">GO</button> 
+    </form>    
+	
+
+    <!-- <p class="important">{{ info }}</p> -->
+
+</body>
+</html>

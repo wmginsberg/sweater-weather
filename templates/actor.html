@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <style type="text/css">
+        .important { color: #336699; }
+        li {
+            width: 40%;
+            text-align: center;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 24px;
+            margin: 10px auto;
+        }
+        ul {
+            list-style-type: none;
+        }
+        h1 {
+            font-size: 80px;
+            color: maroon;
+            font-family: 'Chewy', cursive;
+        }
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 28px;
+            color: black;
+        }
+        html {
+            background-color: #cefaff;
+            text-align: center;
+        }
+    </style>
+    <title>Sweater Weather</title>
+</head>
+<body>
+    <h2> TODAY IN {{ town }}, IT IS </h2>
+    {% if sw == True %}
+      <h1>Sweater Weather</h1>
+    {% else %}
+      <h1> NOT Sweater Weather </h1>
+    {% endif %}
+    <ul>
+     <li>{{ deg }} ºF </li> 
+    {% for item in weathers %}
+     <li>{{ item }}</li>
+    {% endfor %}
+    </ul>     
+	
+
+    <!-- <p class="important">{{ info }}</p> -->
+
+</body>
+</html>
