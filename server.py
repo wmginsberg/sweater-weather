@@ -1,9 +1,6 @@
 from flask import Flask, request, redirect, render_template
 import requests
-import ssl
-import json 
 
-print(ssl.OPENSSL_VERSION)
 
 app = Flask(__name__)
 API_KEY = '7c791a9b70cc0570c13fdb3cff7cede3'
