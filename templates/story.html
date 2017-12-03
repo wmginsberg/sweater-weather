@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <style type="text/css">
+        .important { color: #336699; }
+
+        .wrapper {
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: 1fr 3fr 1fr;
+        }
+
+        li {
+            width: 80%;
+            text-align: center;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: black;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 24px;
+            margin: 10px auto;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0px;
+        }
+        h1 {
+            font-size: 80px;
+            color: maroon;
+            font-family: 'Chewy', cursive;
+            margin: 5px;
+        }
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 28px;
+            color: black;
+            margin-top: 50px;
+        }
+        html {
+            background-color: #cefaff;
+            text-align: center;
+        }
+/*        img {
+            max-width: 90%;
+            margin: 30% 0px 0px 0px;
+
+        }*/
+        #rev {
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+        @media only screen and (max-width: 630px) {
+
+           h1 { 
+              font-size: 40px; 
+           }
+           h2 {
+              font-size: 14px;
+           }
+           li {
+              font-size: 12px;
+           }
+
+        }
+    .icons {
+      max-width: 200px;
+      margin: auto;
+    }
+    </style>
+    <title>Sweater Weather</title>
+</head>
+<body>
+
+<p> {{ icons }} </p>
+<ul>
+{% for icon in icons %}
+    <li>
+      <h2> {{ icon.term }} </h2>
+      <img class="icons" src="{{ icon.img_url }}">
+      <p>{{ icon.attr }}</p>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+{% endfor %}
+</li>
+<!-- <div class="wrapper">
+  <div class="box a">
+  {% if sw == True %}
+      <img id="rev" src="/static/SLEEVE.png">
+  {% endif %}
+  </div>
+  <div class="box b">
+    <h2> TODAY IN {{ town }}, IT IS </h2>
+    {% if sw == True %}
+      <h1>Sweater Weather</h1>
+    {% else %}
+      <h1> NOT Sweater Weather </h1>
+    {% endif %}
+    <ul>
+     <li>{{ deg }} ºF </li> 
+    {% for item in weathers %}
+     <li>{{ item }}</li>
+    {% endfor %}
+    </ul>     
+  </div>
+  <div class="box c">
+  {% if sw == True %}
+      <img src="/static/SLEEVE.png">
+  {% endif %}
+  </div>
+</div> -->
+
+</body>
+</html>
