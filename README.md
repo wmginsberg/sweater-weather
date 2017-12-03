@@ -5,4 +5,4 @@ https://www.sweaterweater.today
 Flask, Jinja, HTML/CSS, OpenWeatherMap API
 
 ## Thanks to
-Erica Buki
+Erica Buki# collab-crossword
